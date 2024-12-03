@@ -17,3 +17,19 @@ const getComputerChoice = () => {
       return "invalid choice";
   }
 };
+
+const getHumanChoice = () => {
+  const userInput = prompt(
+    "Please enter your choice (rock - paper - scissor)"
+  ).toLowerCase();
+  switch (userInput) {
+    case "rock":
+      return "rock";
+    case "paper":
+      return "paper";
+    case "scissors":
+      return "scissors";
+    default:
+      return "invalid choice";
+  }
+};
