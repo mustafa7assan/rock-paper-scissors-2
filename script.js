@@ -19,17 +19,15 @@ const getComputerChoice = () => {
 };
 
 const getHumanChoice = () => {
-  const userInput = prompt(
-    "Please enter your choice (rock - paper - scissor)"
-  ).toLowerCase();
-  switch (userInput) {
-    case "rock":
-      return "rock";
-    case "paper":
-      return "paper";
-    case "scissors":
-      return "scissors";
-    default:
-      return "invalid choice";
+  let userInput;
+  while (true) {
+    userInput = prompt("Please enter your choice (rock, paper or scissor)")
+      .trim()
+      .toLowerCase();
+    if (["rock", "paper", "scissor"].includes(userInput)) {
+      return userInput;
+    } else {
+      alert("Invalid choice. Please try again with rock, paper, or scissors.");
+    }
   }
 };
