@@ -65,9 +65,11 @@ const playGame = () => {
   }
   console.log("=============== The Winner =============");
   if (humanScore > computerScore) {
-    console.log("You");
+    console.log(`Human wins! Human: ${humanScore}. Computer: ${computerScore}`);
   } else {
-    console.log("Computer");
+    console.log(
+      `Computer wins! Computer: ${computerScore}. Human: ${humanScore}`
+    );
   }
   console.log("=========================================");
 };
